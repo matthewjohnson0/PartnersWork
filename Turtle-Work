@@ -1,0 +1,80 @@
+import turtle
+import random
+
+t=turtle.Turtle()
+t.speed(0)
+def drawamong(colour):
+	t.width(4)
+	turtle.colormode(255)
+	t.pencolor(colour)
+	t.left(90)
+	t.circle(120,180)
+	t.forward(30)
+	t.forward(90)
+	t.right(90)
+	t.forward(60)
+	t.right(90)
+	t.forward(120)
+	t.right(90)
+	t.forward(60)
+	t.right(90)
+	t.forward(250)
+	t.left(90)
+	t.forward(90)
+	t.left(90)
+	t.forward(90)
+	t.right(90)
+	t.forward(60)
+	t.right(90)
+	t.forward(90)
+	t.left(90)
+	t.forward(90)
+	t.left(90)
+	t.forward(170)
+	t.right(90)
+	t.pencolor((0,120,255))
+	t.circle(40,180)
+	t.forward(100)
+	t.circle(40,180)
+	t.forward(100)
+
+red = (255,0,0)
+green = (0,255,0)
+blue = (0,0,255)
+magenta = (255,0,255)
+yellow = (255,255,0)
+orange = (255,126,0)
+turquoise = (8,232,222)
+purple = (160,32,240)
+colours = [red,orange,yellow,green,turquoise,blue,purple,magenta]
+count = 0
+runningcount = 0
+#while count > 0:
+#	t.right(random.randint(0,360))
+#	drawamong(colours[random.randint(0,4)])
+#	count = count - 1
+#	runningcount = runningcount + 5
+	
+
+#usercolour=input('''what colour do you want your character to be?:
+#red
+#green
+#blue
+#-> ''')
+#drawamong(usercolour)
+turtle.colormode(255)
+current = 0
+t.width(2)
+for i in range(400):
+	if current == 8:
+		current = 0
+	t.pencolor(colours[current])
+	t.forward(2*150)
+	t.right(179)
+	t.forward(2*175)
+	t.left(60)
+	t.forward(2*150)
+	t.right(179)
+	t.forward(2*175)
+	t.left(60)
+	current = current+1	
